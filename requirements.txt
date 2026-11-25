@@ -1,0 +1,13 @@
+pandas
+numpy
+scipy
+scikit-learn
+nltk
+pyarrow
+matplotlib
+transformers
+torch
+faster-whisper
+requests
+tqdm
+pymupdf

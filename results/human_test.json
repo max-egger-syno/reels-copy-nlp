@@ -1,0 +1,24 @@
+{
+ "n_participants": 14,
+ "accuracy_all": 0.558,
+ "accuracy_before_cards": 0.58,
+ "accuracy_after_cards": 0.536,
+ "mean_gain_pp": -4.5,
+ "gain_ci95_pp": [
+  -15.2,
+  6.2
+ ],
+ "helped_mean_1to5": 3.29,
+ "creators_share": 0.0,
+ "by_sector": {
+  "ai": 0.536,
+  "hair_visagism": 0.5,
+  "sales": 0.643,
+  "sports": 0.536,
+  "trading": 0.548
+ },
+ "comments": [
+  "A dica sobre a primeira linha me ajudou a comparar as legendas. Nos pares em que as duas chamavam atenção, segui pelo assunto que me dava mais vontade de ver o vídeo."
+ ],
+ "reference_tan2014_humans": 0.613
+}

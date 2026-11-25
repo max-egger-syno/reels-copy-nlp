@@ -1,0 +1,210 @@
+<title>Qual Reel Viralizou</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: one narrow phone column, one question per screen, two caption cards stacked like a feed. */
+:root {
+  --bg: #f6f4fb; --surface: #ffffff; --ink: #1d1a29; --muted: #6a6480; --line: #e3dff0;
+  --accent: #6a3fd6; --accent-ink: #ffffff; --accent-soft: #ece6fb; --good: #1f8a5b; --bad: #c2453b;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #15131d; --surface: #1f1c2b; --ink: #eeeaf8; --muted: #a39dbb; --line: #332f45;
+  --accent: #a58bff; --accent-ink: #15131d; --accent-soft: #2b2540; --good: #4cc38a; --bad: #ff7b6e; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #15131d; --surface: #1f1c2b; --ink: #eeeaf8; --muted: #a39dbb; --line: #332f45;
+  --accent: #a58bff; --accent-ink: #15131d; --accent-soft: #2b2540; --good: #4cc38a; --bad: #ff7b6e; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font: 16px/1.5 var(--body); }
+.wrap { max-width: 560px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 18px; }
+h1, h2 { font-family: var(--display); font-weight: 700; line-height: 1.15; margin: 0; text-wrap: balance; }
+h1 { font-size: 1.9rem; } h2 { font-size: 1.35rem; }
+p { margin: 0; }
+.muted { color: var(--muted); font-size: .92rem; }
+.eyebrow { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.progress { height: 6px; background: var(--line); border-radius: 99px; overflow: hidden; }
+.progress > i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .3s ease; }
+.who { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.who b { font-weight: 600; }
+.cap { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px;
+  display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.cap .tag { font-family: var(--display); font-weight: 700; font-size: 1.05rem; }
+.cap .txt { white-space: pre-wrap; overflow-wrap: anywhere; }
+.cap .hook { font-size: .9rem; color: var(--muted); border-left: 3px solid var(--accent-soft); padding-left: 10px; }
+.cap .hook em { font-style: normal; font-weight: 600; color: var(--ink); }
+button { font: 600 1rem var(--body); border-radius: 12px; padding: 12px 16px; cursor: pointer; border: 1px solid var(--accent); }
+button.primary { background: var(--accent); color: var(--accent-ink); }
+button.ghost { background: transparent; color: var(--accent); }
+button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+button:disabled { opacity: .45; cursor: default; }
+.pick { width: 100%; }
+.cards { display: grid; gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; display: grid; gap: 6px; }
+.card h3 { margin: 0; font-family: var(--display); font-size: 1.08rem; }
+.card .ev { font-size: .85rem; color: var(--muted); }
+.card .ex { font-size: .92rem; background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; }
+label { font-weight: 600; display: block; margin-bottom: 6px; }
+input[type=text], textarea { width: 100%; box-sizing: border-box; font: 1rem var(--body); padding: 10px 12px; border-radius: 10px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+.seg { display: flex; gap: 8px; flex-wrap: wrap; }
+.seg button { flex: 1 1 0; min-width: 52px; background: var(--surface); color: var(--ink); border-color: var(--line); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.score { font-family: var(--display); font-size: 3rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.code { font: .85rem ui-monospace, Consolas, monospace; background: var(--surface); border: 1px dashed var(--line); border-radius: 10px;
+  padding: 10px 12px; overflow-wrap: anywhere; user-select: all; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; }
+.row > * { flex: 1 1 200px; }
+a.btn { display: inline-flex; justify-content: center; align-items: center; text-decoration: none; font-weight: 600; border-radius: 12px;
+  padding: 12px 16px; background: var(--good); color: #fff; }
+@media (prefers-reduced-motion: reduce) { .progress > i { transition: none; } }
+</style>
+
+<div class="wrap" id="app"></div>
+
+<script id="payload" type="application/json">__PAYLOAD__</script>
+<script>
+(() => {
+  const DATA = JSON.parse(document.getElementById("payload").textContent);
+  const SECTOR = { ai: "IA", hair_visagism: "Cabelo e visagismo", sales: "Vendas", trading: "Trading", sports: "Esporte" };
+  const S = DATA.card_stats, N = S.n_creators;
+  const CARDS = [
+    { t: "Primeira linha curta",
+      d: "A primeira linha da legenda é o que aparece antes do \"mais\". Nos Reels que viralizaram, ela costumava ter até 60 caracteres.",
+      ev: `Mais comum nos virais em ${S.short_first_line.up} de ${N} criadores (o contrário em ${S.short_first_line.down}).`,
+      ex: "\"Essa notícia me deixou decepcionado.\"" },
+    { t: "Números e valores na abertura pesam contra",
+      d: "Listas numeradas (\"3 mudanças\", \"10 anos\") e valores em dinheiro na primeira linha apareceram mais nos Reels que não viralizaram.",
+      ev: `Números na 1ª linha: mais comuns nos que não viralizaram em ${S.number_first_line.down} de ${N} criadores. Dinheiro: em ${S.money_number.down} de ${N}, nunca o contrário.`,
+      ex: "Fraco: \"Três coisas que estão te envelhecendo 10 anos.\"" },
+    { t: "Menos \"você\" genérico",
+      d: "Falar com \"você\" o tempo todo não ajudou. Opinião, notícia e reação em primeira pessoa funcionaram melhor dentro do mesmo perfil.",
+      ev: `\"Você\" mais comum nos que não viralizaram em ${S.second_person.down} de ${N} criadores, nunca o contrário.`,
+      ex: "\"Precisava falar sobre isso\"" },
+    { t: "Pedir para seguir não atrapalha",
+      d: "Um pedido direto para seguir apareceu um pouco mais nos virais. É um sinal fraco: ajuda pouco, mas não custa.",
+      ev: `Mais comum nos virais em ${S.cta_follow.up} de ${N} criadores, nunca o contrário.`,
+      ex: "\"Já me segue pra vender mais com menos esforço.\"" },
+  ];
+
+  // Counterbalanced: half the people see block 1 before the cards, half see block 2 first.
+  // crypto first: the host can make Math.random repeat, and every early participant got the same order.
+  const coin = (() => { try { return crypto.getRandomValues(new Uint8Array(1))[0] & 1; }
+    catch (e) { return (Date.now() + performance.now() * 1000) % 2 < 1 ? 0 : 1; } })();
+  const order = coin ? [2, 1] : [1, 2];
+  const blocks = order.map((b) => DATA.pairs.filter((p) => p.block === b));
+  const state = { step: "intro", name: "", creator: "", answers: [{}, {}], helped: 0, comment: "", t0: Date.now() };
+  const app = document.getElementById("app");
+  const el = (tag, attrs = {}, ...kids) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === "class") n.className = v; else if (k.startsWith("on")) n.addEventListener(k.slice(2), v); else n.setAttribute(k, v);
+    }
+    kids.flat().forEach((k) => n.append(k instanceof Node ? k : document.createTextNode(String(k))));
+    return n;
+  };
+  const total = blocks[0].length + blocks[1].length;
+  const answered = () => Object.keys(state.answers[0]).length + Object.keys(state.answers[1]).length;
+
+  function render() {
+    app.replaceChildren();
+    window.scrollTo(0, 0);
+    ({ intro, b0: () => pairs(0), cards, b1: () => pairs(1), final, done })[state.step]();
+  }
+
+  function intro() {
+    let creator = "";
+    const name = el("input", { type: "text", id: "name", placeholder: "Pode deixar em branco", maxlength: "40" });
+    const seg = el("div", { class: "seg", role: "group", "aria-label": "Você cria conteúdo?" });
+    const go = el("button", { class: "primary", disabled: "", onclick: () => {
+      state.name = name.value.trim().replace(/\|/g, "/"); state.creator = creator; state.step = "b0"; render(); } }, "Começar");
+    ["Sim", "Não"].forEach((v) => seg.append(el("button", { type: "button", "aria-pressed": "false", onclick: (e) => {
+      creator = v; seg.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b === e.currentTarget)));
+      go.disabled = false; } }, v)));
+    app.append(
+      el("p", { class: "eyebrow" }, "Pesquisa Insper · Processamento de Linguagem Natural"),
+      el("h1", {}, "Qual Reel viralizou?"),
+      el("p", {}, `Você vai ver ${total} pares de Reels do mesmo criador, postados com até 14 dias de diferença. Em cada par, um teve pelo menos o dobro de visualizações do outro. Pelo texto, escolha qual você acha que foi o mais visto.`),
+      el("p", { class: "muted" }, "No meio, você lê 4 dicas curtas de copy. Leva uns 6 minutos. Só registramos o seu palpite em cada par."),
+      el("div", {}, el("label", { for: "name" }, "Seu nome ou apelido (opcional)"), name),
+      el("div", {}, el("label", {}, "Você cria conteúdo para redes sociais?"), seg),
+      go);
+  }
+
+  function pairs(bi) {
+    const list = blocks[bi];
+    const i = Object.keys(state.answers[bi]).length;
+    if (i >= list.length) { state.step = bi === 0 ? "cards" : "final"; return render(); }
+    const p = list[i];
+    const pick = (side) => { state.answers[bi][p.id] = side; render(); };
+    const cap = (side, txt, hook) => el("div", { class: "cap" },
+      el("div", { class: "tag" }, `Reel ${side}`),
+      el("div", { class: "txt" }, txt),
+      hook ? el("div", { class: "hook" }, el("em", {}, "Primeiras palavras faladas: "), hook) : "",
+      el("button", { class: "primary pick", onclick: () => pick(side) }, `Reel ${side} teve mais views`));
+    app.append(
+      el("div", { class: "progress", role: "progressbar", "aria-valuemin": "0", "aria-valuemax": String(total), "aria-valuenow": String(answered()) },
+        Object.assign(el("i"), { style: `width:${(answered() / total) * 100}%` })),
+      el("div", { class: "who" }, el("span", {}, el("b", {}, `@${p.creator}`), ` · ${SECTOR[p.sector] || p.sector}`),
+        el("span", { class: "muted" }, `Parte ${bi + 1} · ${i + 1} de ${list.length}`)),
+      el("p", { class: "muted" }, "Legenda de cada Reel (sem as hashtags):"),
+      cap("A", p.a, p.ah), cap("B", p.b, p.bh));
+  }
+
+  function cards() {
+    app.append(
+      el("p", { class: "eyebrow" }, "Intervalo · leia antes da parte 2"),
+      el("h2", {}, "4 dicas tiradas de 700 Reels"),
+      el("p", { class: "muted" }, `Comparamos cada criador com ele mesmo: os Reels que mais viralizaram contra os que menos viralizaram, em ${N} criadores de 5 setores. Os pares que você está vendo não entraram nesta conta.`),
+      el("div", { class: "cards" }, CARDS.map((c) => el("div", { class: "card" },
+        el("h3", {}, c.t), el("p", {}, c.d), el("p", { class: "ex" }, c.ex), el("p", { class: "ev" }, c.ev)))),
+      el("button", { class: "primary", onclick: () => { state.step = "b1"; render(); } }, "Li as dicas, seguir para a parte 2"));
+  }
+
+  function final() {
+    const seg = el("div", { class: "seg", role: "group", "aria-label": "As dicas ajudaram?" });
+    const comment = el("textarea", { id: "comment", rows: "3", maxlength: "300", placeholder: "Opcional" });
+    const go = el("button", { class: "primary", disabled: "", onclick: () => {
+      state.comment = comment.value.trim().replace(/\|/g, "/").replace(/\s+/g, " "); state.step = "done"; render(); } }, "Ver meu resultado");
+    for (let v = 1; v <= 5; v++) seg.append(el("button", { type: "button", "aria-pressed": "false", onclick: (e) => {
+      state.helped = v; seg.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b === e.currentTarget)));
+      go.disabled = false; } }, String(v)));
+    app.append(
+      el("h2", {}, "Última pergunta"),
+      el("div", {}, el("label", {}, "As dicas ajudaram você a escolher na parte 2?"),
+        el("p", { class: "muted" }, "1 = nada, 5 = muito"), seg),
+      el("div", {}, el("label", { for: "comment" }, "Algum comentário sobre as dicas?"), comment),
+      go);
+  }
+
+  function done() {
+    const score = (bi) => blocks[bi].filter((p) => state.answers[bi][p.id] === p.ans).length;
+    const s0 = score(0), s1 = score(1);
+    const enc = (bi) => blocks[bi].map((p) => `${p.id}${state.answers[bi][p.id]}`).join("");
+    const mins = Math.round((Date.now() - state.t0) / 6000) / 10;
+    const code = ["TESTE-REELS v1", `nome:${state.name || "-"}`, `cria:${state.creator}`, `ordem:${order.join("")}`,
+      `antes:${enc(0)}`, `depois:${enc(1)}`, `ajudou:${state.helped}`, `min:${mins}`, `obs:${state.comment || "-"}`].join(" | ");
+    const msg = `Fiz o teste dos Reels! Acertei ${s0 + s1} de ${total}.\n${code}`;
+    const copyBtn = el("button", { class: "ghost", onclick: async () => {
+      try { await navigator.clipboard.writeText(msg); copyBtn.textContent = "Copiado"; }
+      catch (e) { const r = document.createRange(); r.selectNodeContents(codeBox); const s = getSelection(); s.removeAllRanges(); s.addRange(r); copyBtn.textContent = "Selecionado: copie com o menu"; }
+    } }, "Copiar resultado");
+    const codeBox = el("div", { class: "code" }, msg);
+    app.append(
+      el("p", { class: "eyebrow" }, "Resultado"),
+      el("div", { class: "score" }, `${s0 + s1}/${total}`),
+      el("p", {}, `Antes das dicas: ${s0} de ${blocks[0].length}. Depois das dicas: ${s1} de ${blocks[1].length}.`),
+      el("p", { class: "muted" }, "Para referência: num estudo com tweets, pessoas acertaram 61% de pares parecidos."),
+      el("h2", {}, "Falta só um passo"),
+      el("p", {}, "Mande o resultado abaixo para quem te enviou este link. É assim que a sua resposta entra na pesquisa."),
+      el("div", { class: "row" },
+        el("a", { class: "btn", href: `https://wa.me/?text=${encodeURIComponent(msg)}`, target: "_blank", rel: "noopener" }, "Enviar no WhatsApp"),
+        copyBtn),
+      codeBox);
+  }
+
+  render();
+})();
+</script>

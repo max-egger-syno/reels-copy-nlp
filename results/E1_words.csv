@@ -1,0 +1,49 @@
+username,sector,label,term,direction,stability,p_viral,n_docs_viral,n_docs_flop
+cafecomferri,trading,y_viral,você vai,flop,0.925,0.43910917343600175,2,5
+cafecomferri,trading,y_viral,você aprende,flop,0.78,0.45844488326240296,1,6
+eduardomulleroficial,hair_visagism,y_viral,você vai,flop,0.705,0.5331876217339991,13,20
+eduardomulleroficial,hair_visagism,y_viral,seu conhecimento,flop,0.94,0.5238452235621611,0,9
+leandrobranquinho,sales,y_viral,branquinho palestrante,viral,0.705,0.5960732263052289,8,6
+leandrobranquinho,sales,y_viral,leandro branquinho,viral,0.81,0.60665091324949,15,8
+leandrobranquinho,sales,y_viral,nuvem shop,flop,0.96,0.397192831862183,0,6
+leandrobranquinho,sales,y_viral,loja virtual,flop,0.91,0.4099873142257322,0,8
+leandrobranquinho,sales,y_viral,desconto na,flop,0.805,0.4197589481696492,0,9
+leandrobranquinho,sales,y_viral,de desconto,flop,0.885,0.41577613654981765,0,11
+odanilogato,ai,y_viral,um robô,viral,0.735,0.5380372915402657,9,2
+odanilogato,ai,y_viral,agente de,flop,0.75,0.40897420065134493,1,9
+portstrader,trading,y_viral,no mercado,viral,0.845,0.6279131934751325,6,2
+thiagoconceroficial,sales,y_viral,continua vendendo,viral,0.72,0.6144782970650473,3,0
+beprecht,ai,y_convert,sei lá,viral,0.73,0.446661589600184,10,3
+beprecht,ai,y_convert,minha vida,viral,0.725,0.45666905417744524,5,0
+beprecht,ai,y_convert,inteligência artificial,flop,0.83,0.3048721678957756,6,20
+beprecht,ai,y_convert,da inteligência,flop,0.885,0.30927682038773835,0,9
+brunooliver,hair_visagism,y_convert,branco,viral,0.81,0.5985818265069321,6,0
+brunooliver,hair_visagism,y_convert,cabelo branco,viral,0.89,0.6112954925373376,5,0
+cafecomferri,trading,y_convert,presidente bolsonaro,viral,0.875,0.5455096544467083,7,0
+cafecomferri,trading,y_convert,de flávio,viral,0.735,0.5186299378128567,6,0
+cafecomferri,trading,y_convert,flávio vai,viral,0.74,0.5269495301904553,6,0
+cafecomferri,trading,y_convert,que flávio,viral,0.705,0.5194576727273971,1,0
+cafecomferri,trading,y_convert,bolsonaro,viral,0.995,0.5636821777079404,18,0
+cafecomferri,trading,y_convert,flávio,viral,0.96,0.5506645839926207,16,2
+cafecomferri,trading,y_convert,flávio bolsonaro,viral,1.0,0.635107515144157,11,0
+cafecomferri,trading,y_convert,aqui você,flop,0.99,0.29691267701539786,0,16
+cafecomferri,trading,y_convert,você aprende,flop,0.715,0.3163106461559026,0,10
+cafecomferri,trading,y_convert,na vida,flop,0.81,0.3078403100471017,1,11
+eduardomulleroficial,hair_visagism,y_convert,que acharam,viral,0.71,0.6096292948255561,3,0
+odanilogato,ai,y_convert,eu mandei,viral,0.7,0.44180257519179156,8,0
+odanilogato,ai,y_convert,aqui embaixo,viral,0.79,0.45176056198516246,19,4
+odanilogato,ai,y_convert,embaixo que,viral,0.86,0.4507631334040321,17,1
+odanilogato,ai,y_convert,mando,viral,0.995,0.45819382104625794,23,3
+odanilogato,ai,y_convert,imersão super,viral,0.985,0.47572724124320764,11,2
+odanilogato,ai,y_convert,super funcionário,viral,0.95,0.4761327417958628,11,2
+odanilogato,ai,y_convert,mando link,viral,1.0,0.48756744173573074,6,0
+odanilogato,ai,y_convert,te mando,viral,1.0,0.5042011073226371,23,3
+odanilogato,ai,y_convert,capcut world,flop,0.755,0.30935815554866697,0,3
+odanilogato,ai,y_convert,do capcut,flop,0.71,0.31144470639830046,0,3
+odanilogato,ai,y_convert,los angeles,flop,0.705,0.31717538909895987,0,4
+portstrader,trading,y_convert,aqui embaixo,viral,0.88,0.5682001913093939,13,4
+portstrader,trading,y_convert,dre aqui,viral,0.79,0.5611945173710816,11,3
+thiagoconceroficial,sales,y_convert,em vendas,flop,0.73,0.40681318994280263,0,5
+tiagoleifert,sports,y_convert,não pode,viral,0.74,0.6031042040078828,9,0
+tiagoleifert,sports,y_convert,acho que,viral,0.885,0.613660569086726,15,1
+tiagoleifert,sports,y_convert,eu acho,viral,0.835,0.6103950145895057,11,2

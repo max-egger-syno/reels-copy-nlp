@@ -1,0 +1,11 @@
+sector,n_topics,topic,top_words,mean_within_creator_rho_lift
+ai,2,0,"ai, ter, empresa, cara, tá, vez, negócio, sobre, mundo, nesse",-0.018560851658313175
+ai,2,1,"ia, dia, agente, cada, claude, vídeo, menos, gpt, robô, link",0.018560851658313175
+hair_visagism,2,0,"mulher, corte, pra, antes, mulheres, precisa, pode, fazer, loiro, rosto",0.21387447795728914
+hair_visagism,2,1,"pra, pessoas, aí, tá, cara, fazer, tudo, ter, gente, lá",-0.21387447795728914
+sales,2,0,"loja, precisa, pode, clientes, shop, dias, link, dia, comprar, venda",-0.06136978218536661
+sales,2,1,"gente, pra, vendedor, pessoa, fazer, porque, então, vender, pessoas, pode",0.06136978218536661
+sports,2,0,"porque, lá, dia, falar, pessoas, coisa, tudo, vida, assim, vou",0.22349881391294404
+sports,2,1,"jogo, lá, vou, cara, olha, playstation, hoje, assim, acho, agora",-0.22349881391294404
+trading,2,0,"vai, então, flávio, bolsonaro, pode, aqui, lula, gente, campanha, porque",0.0759816312502588
+trading,2,1,"vai, gente, acho, aí, flávio, né, então, lula, tá, porque",-0.0759816312502588

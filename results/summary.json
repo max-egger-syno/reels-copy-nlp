@@ -1,0 +1,86 @@
+{
+ "n_reels": 1005,
+ "n_creators": 9,
+ "pairs": {
+  "test": 136,
+  "train": 311
+ },
+ "anew_coverage_mean": 0.19909856221539493,
+ "E3": [
+  {
+   "model": "random",
+   "accuracy": 0.5,
+   "ci_low": 0.493,
+   "ci_high": 0.503,
+   "p_vs_chance": 0.534
+  },
+  {
+   "model": "length_only",
+   "accuracy": 0.662,
+   "ci_low": 0.576,
+   "ci_high": 0.754,
+   "p_vs_chance": 0.0
+  },
+  {
+   "model": "devices_anew_perplexity_lr",
+   "accuracy": 0.529,
+   "ci_low": 0.462,
+   "ci_high": 0.615,
+   "p_vs_chance": 0.274
+  },
+  {
+   "model": "tfidf_lr",
+   "accuracy": 0.618,
+   "ci_low": 0.5,
+   "ci_high": 0.714,
+   "p_vs_chance": 0.004
+  },
+  {
+   "model": "tfidf_lr_opening_only",
+   "accuracy": 0.515,
+   "ci_low": 0.431,
+   "ci_high": 0.609,
+   "p_vs_chance": 0.399
+  },
+  {
+   "model": "tfidf_lr_per_creator",
+   "accuracy": 0.588,
+   "ci_low": 0.496,
+   "ci_high": 0.682,
+   "p_vs_chance": 0.024
+  },
+  {
+   "model": "bertimbau_frozen_lr",
+   "accuracy": 0.581,
+   "ci_low": 0.516,
+   "ci_high": 0.644,
+   "p_vs_chance": 0.036
+  }
+ ],
+ "E4": [
+  {
+   "relation": "other_sector",
+   "mean_balanced_accuracy": 0.502,
+   "n_cells": 64,
+   "ci_low": 0.475,
+   "ci_high": 0.528,
+   "viral_word_jaccard": 0.0
+  },
+  {
+   "relation": "same_creator",
+   "mean_balanced_accuracy": 0.589,
+   "n_cells": 9,
+   "ci_low": 0.544,
+   "ci_high": 0.639,
+   "viral_word_jaccard": NaN
+  },
+  {
+   "relation": "same_sector",
+   "mean_balanced_accuracy": 0.558,
+   "n_cells": 8,
+   "ci_low": 0.485,
+   "ci_high": 0.622,
+   "viral_word_jaccard": 0.0
+  }
+ ]
+}
