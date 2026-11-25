@@ -8,6 +8,7 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{array}
+\usepackage{url}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -71,9 +72,9 @@ A test pair is two Reels by the same creator, posted at most 14 days apart, wher
 
 \textbf{Methods.} All come from the course, each answering one question.
 TF-IDF with logistic regression asks whether the words predict the winner, and its probabilities rank the words.
-Regular expressions count copy devices (questions, numbers, calls to action, talking to \textit{voc\^e}), and the Brazilian version~\cite{anewbr} of the ANEW lexicon used in class measures emotion; both test the popular tips directly.
+Regular expressions count copy devices (questions, numbers, calls to action, talking to \textit{voc\^e}), and the Brazilian version~\cite{anewbr} of the ANEW lexicon used in class measures emotion; both test the popular tips directly, together with the perplexity of each opening under a bigram model of the creator's other openings (PPL), which measures how formulaic it is.
 Frozen BERT embeddings, from BERTimbau~\cite{bertimbau}, the Portuguese version of the BERT used in class, check whether a pretrained model sees more than word counts.
-Training on one creator and testing on another asks whether the lessons transfer, and LDA topics separate wording from subject.
+Training on one creator and testing on another asks whether the lessons transfer, and LDA topics~\cite{lda} separate wording from subject.
 Confidence intervals resample creators, so one creator cannot drive a result.
 
 \textbf{Educational material.} For each sector, a short card lists the words and copy devices that went with each creator's stronger and weaker Reels, with real examples.
@@ -107,6 +108,7 @@ Comparing each creator with themself works: it removes audience size and still f
 The signal is not the one marketers talk about.
 The common hook tips did not hold up; what did is saying less in the first seconds, and beyond that each creator's winning words are their own.
 For creators, the practical lesson is to compare yourself with yourself, which the notebook makes easy.
+Code, results, cards, notebook and test page: \url{https://github.com/max-egger-syno/reels-copy-nlp}.
 
 The limits are real: about 110 Reels per creator, one sports creator, views as the only measure, and correlation only, since a slower opening may stand for editing style.
 We also found and fixed mistakes along the way: the test page first showed every participant the same order, and the tips came from partial data, before the opening result was known.
@@ -118,6 +120,7 @@ What I learned is that, with AI writing and running the code, modeling becomes m
 \bibitem{berger2012} J. Berger and K. L. Milkman, ``What makes online content viral?'' J. Marketing Research, vol. 49, no. 2, pp. 192--205, 2012.
 \bibitem{anewbr} C. H. Kristensen, C. F. A. Gomes, A. R. Justo, and K. Vieira, ``Normas brasileiras para o Affective Norms for English Words,'' Trends Psychiatry Psychother., vol. 33, no. 3, pp. 135--146, 2011.
 \bibitem{bertimbau} F. Souza, R. Nogueira, and R. Lotufo, ``BERTimbau: Pretrained BERT models for Brazilian Portuguese,'' in Proc. BRACIS, 2020, pp. 403--417.
+\bibitem{lda} D. M. Blei, A. Y. Ng, and M. I. Jordan, ``Latent Dirichlet allocation,'' J. Machine Learning Research, vol. 3, pp. 993--1022, 2003.
 \bibitem{whisper} A. Radford et al., ``Robust speech recognition via large-scale weak supervision,'' in Proc. ICML, 2023, pp. 28492--28518.
 \end{thebibliography}
 
